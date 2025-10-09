@@ -9,7 +9,8 @@
             "footer": "As credenciais são armazenadas com segurança.",
             "link": ""
         },
-        "params": [            {
+        "params": [            
+            {
                 "name": "whomToken",
                 "type": "string",
                 "inputType": "text",
