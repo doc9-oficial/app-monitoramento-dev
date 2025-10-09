@@ -1,0 +1,67 @@
+{
+    "name": "app-monitoramento-dev",
+    "version": "1.0.0",
+    "description": "Monitoramento de Andamentos – Escavador: Acompanha atualizações automáticas em processos de um CPF/CNPJ",
+    "auth": {
+        "description": {
+            "title": "Configuração de Acesso",
+            "body": "Configure suas credenciais para acessar o serviço.",
+            "footer": "As credenciais são armazenadas com segurança.",
+            "link": ""
+        },
+        "params": [            {
+                "name": "whomToken",
+                "type": "string",
+                "inputType": "text",
+                "required": true,
+                "label": "Token do Whom"
+            },
+            {
+                "name": "whomExtensionId",
+                "type": "string",
+                "inputType": "text",
+                "required": true,
+                "label": "ID da Extensão do Whom"
+            }        
+        ]
+    },
+    "functions": {
+        "monitorarProcessos": {
+            "script": "dist/monitorarProcessos.js",
+            "description": "Monitora novos andamentos de processos",
+            "category": "judicial",
+            "values": {
+                "numeroProcesso": "0000000-00.0000.0.00.0000"
+            },
+            "params": [
+                {
+                    "name": "numeroProcesso",
+                    "type": "string",
+                    "inputType": "text",
+                    "required": true,
+                    "label": "Número do Processo"
+                }
+            ]        },
+        "listarMonitoramentos": {
+            "script": "dist/listarMonitoramentos.js",
+            "description": "Lista processos em monitoramento",
+            "category": "judicial",
+            "values": {
+                "parametro": "valor"
+            },
+            "params": [
+                {
+                    "name": "parametro",
+                    "type": "string",
+                    "inputType": "text",
+                    "required": true,
+                    "label": "Parâmetro principal"
+                }
+            ]        }    },
+    "config": {
+        "timeout": 60000,
+        "max_retries": 3,
+        "cache_ttl": 3600
+    },
+    "mcp": true
+}
