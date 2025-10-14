@@ -9,7 +9,7 @@
             "footer": "As credenciais são armazenadas com segurança.",
             "link": ""
         },
-        "params": [            
+        "params": [
             {
                 "name": "whomToken",
                 "type": "string",
@@ -23,7 +23,7 @@
                 "inputType": "text",
                 "required": true,
                 "label": "ID da Extensão do Whom"
-            }        
+            }
         ]
     },
     "functions": {
@@ -34,6 +34,12 @@
             "values": {
                 "numeroProcesso": "0000000-00.0000.0.00.0000"
             },
+            "help": {
+                "title": "Como usar a função monitorarProcessos",
+                "body": "Use esta função para iniciar o monitoramento de andamentos de um processo específico. Forneça o número do processo que deseja acompanhar.",
+                "footer": "",
+                "link": ""
+            },
             "params": [
                 {
                     "name": "numeroProcesso",
@@ -42,13 +48,20 @@
                     "required": true,
                     "label": "Número do Processo"
                 }
-            ]        },
+            ]
+        },
         "listarMonitoramentos": {
             "script": "dist/listarMonitoramentos.js",
             "description": "Lista processos em monitoramento",
             "category": "judicial",
             "values": {
                 "parametro": "valor"
+            },
+            "help": {
+                "title": "Como usar a função listarMonitoramentos",
+                "body": "Use esta função para listar todos os processos que estão atualmente em monitoramento. Você pode fornecer parâmetros opcionais para filtrar os resultados.",
+                "footer": "",
+                "link": ""
             },
             "params": [
                 {
@@ -58,7 +71,9 @@
                     "required": true,
                     "label": "Parâmetro principal"
                 }
-            ]        }    },
+            ]
+        }
+    },
     "config": {
         "timeout": 60000,
         "max_retries": 3,
