@@ -28,6 +28,7 @@
     },
     "functions": {
         "monitorarProcessos": {
+            "name": "Monitorar Processos - Escavador",
             "script": "dist/monitorarProcessos.js",
             "description": "Monitora novos andamentos de processos",
             "category": "judicial",
@@ -51,6 +52,7 @@
             ]
         },
         "listarMonitoramentos": {
+            "name": "Listar Monitoramentos - Escavador",
             "script": "dist/listarMonitoramentos.js",
             "description": "Lista processos em monitoramento",
             "category": "judicial",
